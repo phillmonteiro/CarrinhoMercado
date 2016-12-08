@@ -19,7 +19,7 @@ import phillmonteiro.com.br.carrinhodemercado.produto.Produto;
 
 public class SecaoFrutas extends Activity implements View.OnClickListener {
 
-    private static final String SECAO = "Frutass";
+    private static final String SECAO = "Frutas";
 
     private List<Produto> produtos;
     private ListaMercadoHelper listaHelper;
