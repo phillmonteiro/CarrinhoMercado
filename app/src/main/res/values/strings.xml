@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">App Teste Bradesco</string>
+    <string name="add_produto_carrinho">Produto adicionado ao carrinho</string>
+    <string name="ret_produto_carrinho">Produto retirado do carrinho</string>
+
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+
+    <string name="msg_delecao_1">"Tem certeza que deseja retirar "</string>
+    <string name="msg_delecao_2">" da lista?"</string>
+    <string name="msg_produto_retirado">" foi retirado da lista."</string>
+    <string name="msg_adicionar_produto">Você deve informar ao menos o nome do produto!</string>
+    <string name="ok">Ok</string>
+    <string name="x">x</string>
+    <string name="operador_soma">+</string>
+    <string name="tipo">Tipo :</string>
+    <string name="preco">Preço :</string>
+    <string name="deletar_produto">Deletar Produto</string>
+    <string name="preco_produto">Preço Produto</string>
+    <string name="quantidade_carrinho">Quantidade Carrinho</string>
+    <string name="adicionar_produto">Adicionar Produto</string>
+</resources>

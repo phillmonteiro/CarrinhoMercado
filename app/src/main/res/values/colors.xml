@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="action_bar">#084E84</color>
+    <color name="primary_color">#FFFFFF</color>
+    <color name="primary_dark">#ff411118</color>
+    <color name="accent">#ff9d9ea0</color>
+    <color name="accent_other">#d46334</color>
+    <color name="primary_text">#57585A</color>
+    <color name="app_background">#FFFFFF</color>
+    <color name="divider_color">#EDEDED</color>
+    <color name="box_header">#F7F7F7</color>
+    <color name="box_shadow">#A6A6a6</color>
+    <color name="box_background">#F2F2F2</color>
+    <color name="box_stroke">#F3F3F3</color>
+    <color name="opaque_white">#AAFFFFFF</color>
+    <color name="background_overlay">#77000000</color>
+    <color name="background_pressed_button">#30000000</color>
+    <color name="form_label">#314397</color>
+    <color name="inverse_text">#5a5a5a</color>
+    <color name="edit_text_background">#FFFFFF</color>
+    <color name="border">#DDDDDD</color>
+
+    <color name="details_gray">#CCCCCC</color>
+    <color name="black">#000000</color>
+    <color name="details_red">#c51337</color>
+    <color name="details_green">#00661a</color>
+    <color name="action_text">#e5173f</color>
+    <color name="text_view_default">#5a5a5a</color>
+    <color name="screen_title">#114c87</color>
+
+    <color name="checkbox_ativado">#6cc941</color>
+    <color name="positive">#69c240</color>
+    <color name="title_card">#33b8ff</color>
+</resources>

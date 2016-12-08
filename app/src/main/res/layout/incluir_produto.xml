@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#c23032" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:elevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#33b8ff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Nome do Produto :"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:textAllCaps="true"
+                android:textColor="@color/primary_color"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/nomeProduto"
+                android:gravity="center_vertical"
+                android:textAllCaps="true"
+                android:inputType="textPersonName"
+                android:textStyle="bold"
+                android:shadowColor="@color/accent_other"
+                android:textColor="@color/primary_color"
+                android:textSize="17sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#c5d3da">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Tipo :"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:textAllCaps="true"
+                android:textColor="@color/primary_color"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tipoProduto"
+                android:gravity="center_vertical"
+                android:textAllCaps="true"
+                android:inputType="textPersonName"
+                android:textStyle="bold"
+                android:shadowColor="@color/accent_other"
+                android:textColor="@color/primary_color"
+                android:textSize="17sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/adicionarProduto"
+            android:background="@color/positive">
+
+                <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_add_shopping_cart"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

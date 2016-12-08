@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Material.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="HomeRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+
+    <style name="botao_home" parent="Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">7dp</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:background">@drawable/botao_inicial</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="Widget.Button" parent="android:Widget.Button">
+        <item name="android:background">@color/app_background</item>
+        <item name="android:backgroundStacked">@color/app_background</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="ProdutoCheckBox" parent="android:Theme.Material.Light">
+        <item name="colorControlNormal">@color/primary_color</item>
+        <item name="colorControlActivated">@color/checkbox_ativado</item>
+    </style>
+
+</resources>

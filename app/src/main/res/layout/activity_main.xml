@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/accent"
+    tools:context="phillmonteiro.com.br.carrinhodemercado.MainActivity">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="#c23032" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                style="@style/botao_home"
+                android:id="@+id/feira"
+                android:background="#435c83">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:drawablePadding="10dp"
+                    android:text="fei"
+                    android:textAllCaps="true"/>
+
+                //android:drawableTop="@drawable/feira"
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/botao_home"
+                android:id="@+id/bebidas">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:drawablePadding="10dp"
+                    android:text="beb"
+                    android:textAllCaps="true"/>
+
+                //android:drawableTop="@drawable/feira"
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                style="@style/botao_home"
+                android:id="@+id/cereais"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:drawablePadding="10dp"
+                    android:text="cer"
+                    android:textAllCaps="true"/>
+
+                //android:drawableTop="@drawable/feira"
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/carnes"
+                android:orientation="vertical"
+                style="@style/botao_home">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:drawablePadding="10dp"
+                    android:text="car"
+                    android:textAllCaps="true"/>
+
+                //android:drawableTop="@drawable/feira"
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/perfumaria"
+                    android:orientation="vertical"
+                    style="@style/botao_home">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:drawablePadding="10dp"
+                        android:text="per"
+                        android:textAllCaps="true"/>
+
+                    //android:drawableTop="@drawable/feira"
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/limpeza"
+                    android:orientation="vertical"
+                    style="@style/botao_home">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:drawablePadding="10dp"
+                        android:text="lim"
+                        android:textAllCaps="true"/>
+
+                    //android:drawableTop="@drawable/limpeza"
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

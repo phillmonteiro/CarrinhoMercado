@@ -1,0 +1,18 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_size_medium">20sp</dimen>
+    <dimen name="default_border">10dp</dimen>
+
+    <!--MENU-->
+    <dimen name="menu_icons_margin_left">10dp</dimen>
+    <dimen name="menu_text_margin_left">10dp</dimen>
+    <dimen name="menu_icon_size">35dp</dimen>
+
+    <!--HOME-->
+    <dimen name="home_button_text_padding">15dp</dimen>
+
+    <!--LISTA-->
+    <dimen name="lista_card_padding">10dp</dimen>
+</resources>
