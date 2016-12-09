@@ -2,12 +2,18 @@ package phillmonteiro.com.br.carrinhodemercado.adapter;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
@@ -20,6 +26,7 @@ import java.util.List;
 import phillmonteiro.com.br.carrinhodemercado.R;
 import phillmonteiro.com.br.carrinhodemercado.dao.MercadoDAO;
 import phillmonteiro.com.br.carrinhodemercado.produto.Produto;
+import phillmonteiro.com.br.carrinhodemercado.validador.Validadores;
 
 /**
  * Created by philipe.monteiro on 30/11/2016.
@@ -29,13 +36,16 @@ public class MercadoAdapter extends RecyclerView.Adapter implements CompoundButt
     List<Produto> produtos;
     Context context;
     Produto produto;
-    TextView quantidadeComprados, produtoNome;
+    TextView quantidadeComprados, produtoNome, valorTotal;
     NumberPicker precoReal, precoCentavo;
 
-    public MercadoAdapter(List<Produto> produtos, Context context, TextView quantidadeComprados) {
+    Dialog dialog;
+
+    public MercadoAdapter(List<Produto> produtos, Context context, TextView quantidadeComprados, TextView valorTotal) {
         this.produtos = produtos;
         this.context = context;
         this.quantidadeComprados = quantidadeComprados;
+        this.valorTotal = valorTotal;
 
     }
 
@@ -57,7 +67,7 @@ public class MercadoAdapter extends RecyclerView.Adapter implements CompoundButt
         produto  = produtos.get(position) ;
 
         mercadoViewHolder.produtoNome.setText(produto.getNome());
-        mercadoViewHolder.produtoPreco.setText(String.valueOf(produto.getPreco()));
+        mercadoViewHolder.produtoPreco.setText(Validadores.formatarMoeda(produto.getPreco()));
         mercadoViewHolder.produtoTipo.setText(produto.getTipo());
 
         //Gravar Preço
@@ -168,19 +178,23 @@ public class MercadoAdapter extends RecyclerView.Adapter implements CompoundButt
         mercadoDAO.alterarProduto(produto);
         mercadoDAO.close();
 
-        quantidadeComprados.setText(quantidadeCheck());
+        quantidadeCheck();
     }
 
-    private String quantidadeCheck() {
+
+    private void quantidadeCheck() {
         Integer contadorItens = 0;
+        Double valorCalculado = 0.0;
 
         for(Produto produto : produtos){
             if(produto.isAdicionado()){
                 contadorItens += 1;
+                valorCalculado += produto.getPreco();
             }
         }
 
-        return String.valueOf(contadorItens + " de " + produtos.size());
+        quantidadeComprados.setText(String.valueOf(contadorItens + " de " + produtos.size()));
+        valorTotal.setText(Validadores.formatarMoeda(valorCalculado));
     }
 
     @Override
@@ -208,16 +222,34 @@ public class MercadoAdapter extends RecyclerView.Adapter implements CompoundButt
         int precoRealProduto = precoReal.getValue();
         int precoCentavoProduto = precoCentavo.getValue();
 
+        double decimal = (double) precoCentavoProduto / 100;
+        double valorProduto = precoRealProduto + decimal;
+
+        produto.setPreco(valorProduto);
+
+        alterarPrecoProduto(produto);
+
+        dialog.dismiss();
+
+        notifyDataSetChanged();
+
     }
 
     private void inserirPreco(Produto produto) {
 
-        Dialog dialog = new Dialog(context);
+        dialog = new Dialog(context);
+        dialog.getWindow().setLayout(RecyclerView.LayoutParams.MATCH_PARENT, 500);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.alterar_preco);
 
         produtoNome = (TextView) dialog.findViewById(R.id.produtoNome);
+        produtoNome.setText(produto.getNome());
+
         precoReal = (NumberPicker) dialog.findViewById(R.id.precoReal);
+        precoReal.setMaxValue(99);
         precoCentavo = (NumberPicker) dialog.findViewById(R.id.precoCentavos);
+        precoCentavo.setMaxValue(99);
 
         Button gravarPrecoProduto = (Button) dialog.findViewById(R.id.gravarPrecoProduto);
         gravarPrecoProduto.setOnClickListener(this);

@@ -19,4 +19,5 @@
     <string name="preco_produto">Preço Produto</string>
     <string name="quantidade_carrinho">Quantidade Carrinho</string>
     <string name="adicionar_produto">Adicionar Produto</string>
+    <string name="gravar_preco">Gravar Preço</string>
 </resources>

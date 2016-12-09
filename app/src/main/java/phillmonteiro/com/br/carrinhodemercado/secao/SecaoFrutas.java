@@ -21,7 +21,6 @@ public class SecaoFrutas extends Activity implements View.OnClickListener {
 
     private static final String SECAO = "Frutas";
 
-    private List<Produto> produtos;
     private ListaMercadoHelper listaHelper;
 
     @Override
@@ -34,7 +33,7 @@ public class SecaoFrutas extends Activity implements View.OnClickListener {
 
         listaHelper = new ListaMercadoHelper(this);
 
-        produtos = listaHelper.popularLista(SECAO);
+        listaHelper.popularLista(SECAO);
         listaHelper.quantidadeCarrinho();
 
     }
@@ -42,7 +41,7 @@ public class SecaoFrutas extends Activity implements View.OnClickListener {
     @Override
     protected void onResume() {
         super.onResume();
-        produtos = listaHelper.popularLista(SECAO);
+        listaHelper.popularLista(SECAO);
         listaHelper.quantidadeCarrinho();
     }
 
