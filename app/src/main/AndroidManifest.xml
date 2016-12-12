@@ -17,6 +17,13 @@
         </activity>
         <activity android:name=".secao.SecaoFeira"></activity>
         <activity android:name=".secao.SecaoFrutas"></activity>
+        <activity android:name=".secao.SecaoLegumes"></activity>
+        <activity android:name=".secao.SecaoLimpeza"></activity>
+        <activity android:name=".secao.SecaoPerfumaria"></activity>
+        <activity android:name=".secao.SecaoBebidas"></activity>
+        <activity android:name=".secao.SecaoCarnes"></activity>
+        <activity android:name=".secao.SecaoVerduras"></activity>
+        <activity android:name=".secao.SecaoCereais"></activity>
         <activity android:name=".produto.IncluirProduto"></activity>
     </application>
 

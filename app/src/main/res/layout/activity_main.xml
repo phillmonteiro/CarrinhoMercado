@@ -32,7 +32,8 @@
             <LinearLayout
                 style="@style/botao_home"
                 android:id="@+id/feira"
-                android:background="#ff9100">
+                android:background="#ff9100"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -45,13 +46,25 @@
                     android:text="@string/feira"
                     android:textAllCaps="true"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totalFeira"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:drawableLeft="@drawable/ic_cash_multiple_white"
+                    android:drawablePadding="10dp"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
             <LinearLayout
                 style="@style/botao_home"
                 android:id="@+id/bebidas"
-                android:background="#6bff63">
+                android:background="#6bff63"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -64,6 +77,17 @@
                     android:text="@string/bebidas"
                     android:textAllCaps="true"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totalBebidas"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:drawableLeft="@drawable/ic_cash_multiple_white"
+                    android:drawablePadding="10dp"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
@@ -92,16 +116,25 @@
                     android:text="@string/cereal"
                     android:textAllCaps="true"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totalCereais"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:drawableLeft="@drawable/ic_cash_multiple_white"
+                    android:drawablePadding="10dp"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                style="@style/botao_home"
                 android:id="@+id/carnes"
                 android:background="#ab0000"
-                android:orientation="vertical"
-                style="@style/botao_home">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -114,6 +147,18 @@
                     android:textStyle="bold"
                     android:textAllCaps="true"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totalCarnes"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:drawableLeft="@drawable/ic_cash_multiple_white"
+                    android:drawablePadding="10dp"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"/>
+
             </LinearLayout>
 
         </LinearLayout>
@@ -125,12 +170,10 @@
             android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    style="@style/botao_home"
                     android:id="@+id/perfumaria"
                     android:orientation="vertical"
-                    android:background="#f7a3ff"
-                    style="@style/botao_home">
+                    android:background="#f7a3ff">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -143,15 +186,25 @@
                         android:text="@string/perfumaria"
                         android:textAllCaps="true"/>
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/totalPerfumaria"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:drawableLeft="@drawable/ic_cash_multiple_white"
+                        android:drawablePadding="10dp"
+                        android:textColor="@color/primary_color"
+                        android:textStyle="bold"/>
+
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    style="@style/botao_home"
                     android:id="@+id/limpeza"
                     android:orientation="vertical"
-                    android:background="#78b4fc"
-                    style="@style/botao_home">
+                    android:background="#78b4fc">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -163,6 +216,18 @@
                         android:textColor="@color/primary_color"
                         android:textStyle="bold"
                         android:textAllCaps="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/totalLimpeza"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:drawableLeft="@drawable/ic_cash_multiple_white"
+                        android:drawablePadding="10dp"
+                        android:textColor="@color/primary_color"
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 

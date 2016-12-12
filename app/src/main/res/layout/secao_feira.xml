@@ -19,17 +19,30 @@
             android:orientation="vertical"
             style="@style/botao_home">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <!--android:src="@drawable/feira"/>-->
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/home_button_text_padding"
-                android:text="f"
+                android:layout_gravity="center"
+                android:drawableTop="@drawable/feira"
+                android:drawablePadding="10dp"
+                android:textColor="@color/primary_color"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="@string/frutas"
                 android:textAllCaps="true"/>
+
+            <TextView
+                android:paddingTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/totalFrutas"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:drawableLeft="@drawable/ic_cash_multiple_white"
+                android:drawablePadding="20dp"
+                android:textColor="@color/primary_color"
+                android:textStyle="bold"/>
 
         </LinearLayout>
 
@@ -41,17 +54,30 @@
                 android:orientation="vertical"
                 style="@style/botao_home">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <!--android:src="@drawable/feira"/>-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableTop="@drawable/feira"
+                android:drawablePadding="10dp"
+                android:textColor="@color/primary_color"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="@string/legumes"
+                android:textAllCaps="true"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/home_button_text_padding"
-                    android:text="l"
-                    android:textAllCaps="true"/>
+            <TextView
+                android:paddingTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/totalLegumes"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:drawableLeft="@drawable/ic_cash_multiple_white"
+                android:drawablePadding="20dp"
+                android:textColor="@color/primary_color"
+                android:textStyle="bold"/>
 
         </LinearLayout>
 
@@ -63,17 +89,30 @@
             android:orientation="vertical"
             style="@style/botao_home">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <!--android:src="@drawable/feira"/>-->
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/home_button_text_padding"
-                android:text="v"
+                android:layout_gravity="center"
+                android:drawableTop="@drawable/feira"
+                android:drawablePadding="10dp"
+                android:textColor="@color/primary_color"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="@string/verduras"
                 android:textAllCaps="true"/>
+
+            <TextView
+                android:paddingTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/totalVerduras"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:drawableLeft="@drawable/ic_cash_multiple_white"
+                android:drawablePadding="20dp"
+                android:textColor="@color/primary_color"
+                android:textStyle="bold"/>
 
         </LinearLayout>
 

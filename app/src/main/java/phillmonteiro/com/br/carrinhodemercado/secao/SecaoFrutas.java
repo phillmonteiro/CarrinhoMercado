@@ -6,12 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import java.util.List;
-
 import phillmonteiro.com.br.carrinhodemercado.R;
+import phillmonteiro.com.br.carrinhodemercado.constante.Constantes;
 import phillmonteiro.com.br.carrinhodemercado.produto.IncluirProduto;
 import phillmonteiro.com.br.carrinhodemercado.produto.ListaMercadoHelper;
-import phillmonteiro.com.br.carrinhodemercado.produto.Produto;
 
 /**
  * Created by philipe.monteiro on 30/11/2016.
@@ -19,7 +17,7 @@ import phillmonteiro.com.br.carrinhodemercado.produto.Produto;
 
 public class SecaoFrutas extends Activity implements View.OnClickListener {
 
-    private static final String SECAO = "Frutas";
+    private static final String SECAO = Constantes.FRUTAS;
 
     private ListaMercadoHelper listaHelper;
 
@@ -60,6 +58,5 @@ public class SecaoFrutas extends Activity implements View.OnClickListener {
                 break;
         }
     }
-
 
 }

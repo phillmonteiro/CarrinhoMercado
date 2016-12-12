@@ -28,4 +28,7 @@
     <string name="limpeza">Limpeza</string>
     <string name="quantidade">Quantidade :</string>
     <string name="gravar_quantidade">Gravar Quantidade</string>
+    <string name="frutas">Frutas</string>
+    <string name="legumes">Legumes</string>
+    <string name="verduras">Verduras</string>
 </resources>
