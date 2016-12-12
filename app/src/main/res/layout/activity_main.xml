@@ -5,15 +5,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/accent"
+    android:background="#fff"
     tools:context="phillmonteiro.com.br.carrinhodemercado.MainActivity">
-
 
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2"
-        android:background="#c23032" />
+        android:background="#c7c7c7" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,35 +32,38 @@
             <LinearLayout
                 style="@style/botao_home"
                 android:id="@+id/feira"
-                android:background="#435c83">
+                android:background="#ff9100">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-
+                    android:drawableTop="@drawable/feira"
                     android:drawablePadding="10dp"
-                    android:text="fei"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"
+                    android:text="@string/feira"
                     android:textAllCaps="true"/>
 
-                //android:drawableTop="@drawable/feira"
 
             </LinearLayout>
 
             <LinearLayout
                 style="@style/botao_home"
-                android:id="@+id/bebidas">
+                android:id="@+id/bebidas"
+                android:background="#6bff63">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-
+                    android:drawableTop="@drawable/bebida"
                     android:drawablePadding="10dp"
-                    android:text="beb"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"
+                    android:text="@string/bebidas"
                     android:textAllCaps="true"/>
 
-                //android:drawableTop="@drawable/feira"
 
             </LinearLayout>
 
@@ -76,18 +78,20 @@
             <LinearLayout
                 style="@style/botao_home"
                 android:id="@+id/cereais"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="#ffd791">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-
+                    android:drawableTop="@drawable/cereal"
                     android:drawablePadding="10dp"
-                    android:text="cer"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"
+                    android:text="@string/cereal"
                     android:textAllCaps="true"/>
 
-                //android:drawableTop="@drawable/feira"
 
             </LinearLayout>
 
@@ -95,6 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/carnes"
+                android:background="#ab0000"
                 android:orientation="vertical"
                 style="@style/botao_home">
 
@@ -102,12 +107,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-
+                    android:drawableTop="@drawable/carne"
                     android:drawablePadding="10dp"
-                    android:text="car"
+                    android:text="@string/carnes"
+                    android:textColor="@color/primary_color"
+                    android:textStyle="bold"
                     android:textAllCaps="true"/>
-
-                //android:drawableTop="@drawable/feira"
 
             </LinearLayout>
 
@@ -124,18 +129,19 @@
                     android:layout_height="match_parent"
                     android:id="@+id/perfumaria"
                     android:orientation="vertical"
+                    android:background="#f7a3ff"
                     style="@style/botao_home">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-
+                        android:drawableTop="@drawable/perfumaria"
                         android:drawablePadding="10dp"
-                        android:text="per"
+                        android:textColor="@color/primary_color"
+                        android:textStyle="bold"
+                        android:text="@string/perfumaria"
                         android:textAllCaps="true"/>
-
-                    //android:drawableTop="@drawable/feira"
 
                 </LinearLayout>
 
@@ -144,18 +150,19 @@
                     android:layout_height="match_parent"
                     android:id="@+id/limpeza"
                     android:orientation="vertical"
+                    android:background="#78b4fc"
                     style="@style/botao_home">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-
+                        android:drawableTop="@drawable/limpeza"
                         android:drawablePadding="10dp"
-                        android:text="lim"
+                        android:text="@string/limpeza"
+                        android:textColor="@color/primary_color"
+                        android:textStyle="bold"
                         android:textAllCaps="true"/>
-
-                    //android:drawableTop="@drawable/limpeza"
 
                 </LinearLayout>
 

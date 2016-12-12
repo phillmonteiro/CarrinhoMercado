@@ -18,7 +18,9 @@ public class MercadoViewHolder extends RecyclerView.ViewHolder{
     TextView produtoNome;
     TextView produtoPreco;
     TextView produtoTipo;
+    TextView produtoQuantidade;
     CheckBox marcarProduto;
+    ImageView gravarQuantidade;
     ImageView gravarPreco;
     Switch deletarProduto;
 
@@ -26,10 +28,12 @@ public class MercadoViewHolder extends RecyclerView.ViewHolder{
         super(itemView);
 
         produtoNome = (TextView) itemView.findViewById(R.id.produtoNome);
-        produtoPreco = (TextView) itemView.findViewById(R.id.produtoPreco);
         produtoTipo = (TextView) itemView.findViewById(R.id.produtoTipo);
-        marcarProduto = (CheckBox) itemView.findViewById(R.id.marcarProduto);
+        produtoPreco = (TextView) itemView.findViewById(R.id.produtoPreco);
+        produtoQuantidade = (TextView) itemView.findViewById(R.id.quantidadeProduto);
+        gravarQuantidade = (ImageView) itemView.findViewById(R.id.gravarQuantidade);
         gravarPreco = (ImageView) itemView.findViewById(R.id.gravarPreco);
+        marcarProduto = (CheckBox) itemView.findViewById(R.id.marcarProduto);
         deletarProduto = (Switch) itemView.findViewById(R.id.deletar_produto);
 
     }

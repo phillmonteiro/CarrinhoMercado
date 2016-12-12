@@ -2,21 +2,17 @@ package phillmonteiro.com.br.carrinhodemercado.adapter;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,7 +33,7 @@ public class MercadoAdapter extends RecyclerView.Adapter implements CompoundButt
     Context context;
     Produto produto;
     TextView quantidadeComprados, produtoNome, valorTotal;
-    NumberPicker precoReal, precoCentavo;
+    NumberPicker precoReal, precoCentavo, quantidadeNumberPick;
 
     Dialog dialog;
 
@@ -69,6 +65,11 @@ public class MercadoAdapter extends RecyclerView.Adapter implements CompoundButt
         mercadoViewHolder.produtoNome.setText(produto.getNome());
         mercadoViewHolder.produtoPreco.setText(Validadores.formatarMoeda(produto.getPreco()));
         mercadoViewHolder.produtoTipo.setText(produto.getTipo());
+        mercadoViewHolder.produtoQuantidade.setText(String.valueOf(produto.getQuantidade()));
+
+        //Gravar Quantidade
+        mercadoViewHolder.gravarQuantidade.setTag(position);
+        mercadoViewHolder.gravarQuantidade.setOnClickListener(this);
 
         //Gravar Preço
         mercadoViewHolder.gravarPreco.setTag(position);
@@ -212,9 +213,56 @@ public class MercadoAdapter extends RecyclerView.Adapter implements CompoundButt
                 capturarPreco(produto);
 
                 break;
+            case R.id.gravarQuantidade:
+
+                produto = produtos.get((Integer) v.getTag());
+                mudarQuantidade(produto);
+
+                break;
+            case R.id.gravarQuantidadeProduto:
+
+                capturarQuantidade();
+
+                break;
             default:
                 break;
         }
+    }
+
+    private void capturarQuantidade() {
+
+        int quantidadeProdutoNP = quantidadeNumberPick.getValue();
+
+        produto.setQuantidade(quantidadeProdutoNP);
+        alterarProduto(produto);
+        dialog.dismiss();
+
+        notifyDataSetChanged();
+    }
+
+    private void mudarQuantidade(Produto produto) {
+
+        configurarDialog(produto, R.layout.alterar_quantidade);
+
+        quantidadeNumberPick = (NumberPicker) dialog.findViewById(R.id.quantidadeNumberPick);
+        quantidadeNumberPick.setMaxValue(99);
+
+        Button gravarQuantidadeProduto = (Button) dialog.findViewById(R.id.gravarQuantidadeProduto);
+        gravarQuantidadeProduto.setOnClickListener(this);
+
+        dialog.show();
+
+    }
+
+    private void configurarDialog(Produto produto, int layout) {
+        dialog = new Dialog(context);
+        dialog.getWindow().setLayout(RecyclerView.LayoutParams.MATCH_PARENT, 500);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(layout);
+
+        produtoNome = (TextView) dialog.findViewById(R.id.produtoNome);
+        produtoNome.setText(produto.getNome());
     }
 
     private void capturarPreco(Produto produto) {
@@ -227,24 +275,18 @@ public class MercadoAdapter extends RecyclerView.Adapter implements CompoundButt
 
         produto.setPreco(valorProduto);
 
-        alterarPrecoProduto(produto);
+        alterarProduto(produto);
 
         dialog.dismiss();
 
+        quantidadeCheck();
         notifyDataSetChanged();
 
     }
 
     private void inserirPreco(Produto produto) {
 
-        dialog = new Dialog(context);
-        dialog.getWindow().setLayout(RecyclerView.LayoutParams.MATCH_PARENT, 500);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.alterar_preco);
-
-        produtoNome = (TextView) dialog.findViewById(R.id.produtoNome);
-        produtoNome.setText(produto.getNome());
+        configurarDialog(produto, R.layout.alterar_preco);
 
         precoReal = (NumberPicker) dialog.findViewById(R.id.precoReal);
         precoReal.setMaxValue(99);
@@ -258,7 +300,7 @@ public class MercadoAdapter extends RecyclerView.Adapter implements CompoundButt
 
     }
 
-    private void alterarPrecoProduto(Produto produto) {
+    private void alterarProduto(Produto produto) {
         MercadoDAO mercadoDAO = new MercadoDAO(context);
 
         mercadoDAO.alterarProduto(produto);
