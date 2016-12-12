@@ -157,8 +157,8 @@
                             android:layout_width="49dp"
                             android:layout_height="50dp"
                             android:id="@+id/gravarQuantidade"
+                            android:src="@drawable/ic_add_circle_outline_black"
                             android:contentDescription="@string/preco_produto"/>
-                        //android:src="@drawable/ic_add_circle_outline_black"
 
                         <ImageView
                             android:layout_width="49dp"
