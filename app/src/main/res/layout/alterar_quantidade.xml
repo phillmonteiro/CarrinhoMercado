@@ -46,9 +46,9 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
+                    android:src="@drawable/ic_add_circle_outline_black"
                     android:paddingStart="@dimen/lista_card_padding"
                     android:contentDescription="@string/quantidade"/>
-                //android:src="@drawable/ic_add_circle_outline_black"
 
             </LinearLayout>
 
