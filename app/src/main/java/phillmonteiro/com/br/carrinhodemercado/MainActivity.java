@@ -4,11 +4,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import phillmonteiro.com.br.carrinhodemercado.constante.Constantes;
@@ -30,6 +31,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setActionBar(myToolbar);
 
         LinearLayout botaoFeira = (LinearLayout) findViewById(R.id.feira);
         botaoFeira.setOnClickListener(this);
@@ -125,34 +129,34 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
                 secaoIntent(SecaoFeira.class);
 
-                return;
+                break;
             case R.id.bebidas:
 
                 secaoIntent(SecaoBebidas.class);
 
-                return;
+                break;
             case R.id.cereais:
 
                 secaoIntent(SecaoCereais.class);
 
-                return;
+                break;
             case R.id.carnes:
 
                 secaoIntent(SecaoCarnes.class);
 
-                return;
+                break;
             case R.id.perfumaria:
 
                 secaoIntent(SecaoPerfumaria.class);
 
-                return;
+                break;
             case R.id.limpeza:
 
                 secaoIntent(SecaoLimpeza.class);
 
-                return;
+                break;
             default:
-                return;
+                break;
         }
 
     }
@@ -162,5 +166,11 @@ public class MainActivity extends Activity implements View.OnClickListener{
         startActivity(intent);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
 }
